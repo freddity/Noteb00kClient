@@ -8,16 +8,71 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
-        android:id="@+id/icon"
+        android:id="@+id/icon_signin"
         android:background="@mipmap/ic_launcher" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:layout_below="@id/icon"
+        android:layout_below="@id/icon_signin"
         android:layout_marginTop="10dp"
-        android:id="@+id/textView_welcome_signIn"
-        style="@style/textview_welcome_signin" />
+        android:id="@+id/text_welcome"
+        style="@style/foreground_text"
+        android:text="@string/welcome"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_welcome"
+        android:layout_marginTop="5dp"
+        android:id="@+id/text_below_welcome_signin"
+        style="@style/second_plan_text"
+        android:text="@string/sign_in_to_continue"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edittext_login_signin"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="4dp"
+        android:id="@+id/text_login_signin"
+        style="@style/second_plan_text"
+        android:text="@string/login"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/text_password_signin"
+        android:layout_marginBottom="7dp"
+        android:id="@+id/edittext_login_signin"
+        style="@style/second_plan_text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText_pass_signIn"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="4dp"
+        android:id="@+id/text_password_signin"
+        style="@style/second_plan_text"
+        android:text="@string/password"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/text_forgot"
+        android:layout_marginBottom="7dp"
+        android:id="@+id/editText_pass_signIn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_signIn_signIn"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/text_forgot"
+        style="@style/second_plan_text"
+        android:onClick="forgotPassword"/>
 
 </RelativeLayout>

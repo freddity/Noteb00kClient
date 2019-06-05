@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">NotesClient</string>
+    <string name="app_name">"The basic application with user accounts "</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_account">Create a new Account</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="password">Password</string>
+    <string name="welcome_back">Welcome back,</string>
+    <string name="welcome">Welcome,</string>
+    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="new_user">New user?</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="create_account_to_continue">Create account to continue</string>
+    <string name="repeat_password">Re-password</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="have_you_account">Have you account?</string>
+    <string name="navigation_drawer_open" translatable="false">navigation_drawer_open</string>
+    <string name="navigation_drawer_close" translatable="false">navigation_drawer_close</string>
 </resources>
