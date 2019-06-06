@@ -24,6 +24,10 @@
         </activity>
 
         <activity android:name=".ActivitySignIn"/>
+
+        <activity android:name=".ActivitySignUp"/>
+
+
     </application>
 
 </manifest>
