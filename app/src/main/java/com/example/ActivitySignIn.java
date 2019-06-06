@@ -18,11 +18,15 @@ public class ActivitySignIn extends Activity {
         decorView.setSystemUiVisibility(uiOptions);
         ActionBar actionBar = getActionBar();
         assert actionBar != null;
-        actionBar.hide();
+        //actionBar.hide();
     }
 
     public void signInClicked(View view) {
         //Snackbar.make(view, R.string.sign_in, Snackbar.LENGTH_SHORT).show();
+
+        Snackbar snackbar = Snackbar
+                .make(view, "www.journaldev.com", Snackbar.LENGTH_LONG);
+        snackbar.show();
     }
 
     public void forgotPasswordClicked(View view) {
