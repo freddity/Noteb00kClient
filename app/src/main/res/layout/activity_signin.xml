@@ -46,7 +46,7 @@
         android:layout_above="@+id/text_password_signin"
         android:layout_marginBottom="7dp"
         android:id="@+id/edittext_login_signin"
-        style="@style/second_plan_text"/>
+        style="@style/edittext_blue"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -63,7 +63,8 @@
         android:layout_height="40dp"
         android:layout_above="@+id/text_forgot"
         android:layout_marginBottom="7dp"
-        android:id="@+id/editText_pass_signIn" />
+        android:id="@+id/editText_pass_signIn"
+        style="@style/edittext_blue"/>
 
     <TextView
         android:layout_width="wrap_content"
