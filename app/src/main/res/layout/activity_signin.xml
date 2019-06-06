@@ -73,7 +73,7 @@
         android:layout_alignParentRight="true"
         android:id="@+id/text_forgot"
         style="@style/second_plan_text"
-        android:onClick="forgotPassword"/>
+        android:onClick="forgotPasswordClicked"/>
 
     <Button
         android:layout_width="match_parent"
@@ -83,7 +83,7 @@
         android:id="@+id/button_signin"
         style="@style/button_signin"
         android:gravity="center"
-        android:onClick="signIn"
+        android:onClick="signInClicked"
         android:text="@string/sign_in"
         android:textStyle="bold"
         android:textSize="15dp"/>
@@ -100,14 +100,16 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
             android:id="@+id/textview_newuser"
-            style="@style/second_plan__blue_text" />
+            style="@style/second_plan_text"
+            android:text="@string/new_user"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/textview_newuser"
             android:layout_marginLeft="2dp"
-            style="@style/second_plan_text"
-            android:onClick="goToSignUp"/>
+            style="@style/second_plan__blue_text"
+            android:onClick="goToSignUpClicked"
+            android:text="@string/sign_up" />
     </RelativeLayout>
 </RelativeLayout>
