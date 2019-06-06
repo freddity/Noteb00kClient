@@ -74,7 +74,8 @@
         android:layout_alignParentRight="true"
         android:id="@+id/text_forgot"
         style="@style/second_plan_text"
-        android:onClick="forgotPasswordClicked"/>
+        android:onClick="forgotPasswordClicked"
+        android:text="@string/forgot_password"/>
 
     <Button
         android:layout_width="match_parent"

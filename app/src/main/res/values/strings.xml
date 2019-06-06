@@ -13,7 +13,7 @@
     <string name="create_account_to_continue">Create account to continue</string>
     <string name="repeat_password">Re-password</string>
     <string name="email" translatable="false">Email</string>
-    <string name="have_you_account">Have you account?</string>
+    <string name="have_you_account">Already have an account?</string>
     <string name="navigation_drawer_open" translatable="false">navigation_drawer_open</string>
     <string name="navigation_drawer_close" translatable="false">navigation_drawer_close</string>
 </resources>
