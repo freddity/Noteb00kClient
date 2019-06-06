@@ -1,7 +1,6 @@
 <resources>
     <style name="foreground_text">
         <item name="android:textColor">@color/colorForeground</item>
-        <item name="android:text">@string/welcome_back</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
     </style>
@@ -12,5 +11,23 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="second_plan__blue_text">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorBlue</item>
+    </style>
+
+    <style name="button_signin">
+        <item name="android:background">@drawable/blue_button</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
 
 </resources>
