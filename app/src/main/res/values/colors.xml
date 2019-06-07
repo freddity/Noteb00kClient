@@ -2,7 +2,7 @@
 <resources>
     <color name="colorBlack">#000000</color>
     <!--<color name="colorBlue">#2336BD</color>-->
-    <color name="colorBlue">#FEDC4D</color>
+    <color name="colorYellow">#FEDC4D</color>
     <color name="colorWhite">#FAFAFA</color>
     <color name="colorForeground">#3B4148</color>
     <color name="colorSecondPlan">#929CA0</color>

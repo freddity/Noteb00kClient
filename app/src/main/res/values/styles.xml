@@ -13,11 +13,11 @@
 
     <style name="second_plan__blue_text">
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/colorBlue</item>
+        <item name="android:textColor">@color/colorYellow</item>
     </style>
 
     <style name="button_signin">
-        <item name="android:background">@drawable/blue</item>
+        <item name="android:background">@drawable/yellow</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/colorWhite</item>
     </style>
@@ -31,7 +31,7 @@
     </style>
 
     <style name="edittext_blue">
-        <item name="android:backgroundTint">@color/colorBlue</item>
-        <item name="android:textColor">@color/colorBlue</item>
+        <item name="android:backgroundTint">@color/colorYellow</item>
+        <item name="android:textColor">@color/colorYellow</item>
     </style>
 </resources>
