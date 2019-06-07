@@ -1,6 +1,7 @@
 package com.example;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -22,6 +23,7 @@ public class ActivitySignIn extends Activity {
     }
 
     public void goToSignUpClicked(View view) {
-        Snackbar.make(view, R.string.have_you_account, Snackbar.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, ActivitySignUp.class);
+        startActivity(intent);
     }
 }

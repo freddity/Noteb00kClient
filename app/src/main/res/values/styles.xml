@@ -32,5 +32,6 @@
 
     <style name="edittext_blue">
         <item name="android:backgroundTint">@color/colorBlue</item>
+        <item name="android:textColor">@color/colorBlue</item>
     </style>
 </resources>

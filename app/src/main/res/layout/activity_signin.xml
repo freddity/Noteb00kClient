@@ -4,31 +4,41 @@
     android:layout_height="match_parent"
     android:padding="30dp">
 
-    <ImageView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:id="@+id/icon_signin"
-        android:background="@mipmap/ic_launcher" />
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_below="@id/icon_signin"
-        android:layout_marginTop="10dp"
-        android:id="@+id/text_welcome"
-        style="@style/foreground_text"
-        android:text="@string/welcome_back"/>
+        <ImageView
+            android:layout_width="144dp"
+            android:layout_height="144dp"
+            android:layout_gravity="top"
+            android:id="@+id/icon_signin"
+            android:background="@drawable/notes"
+            android:scaleType="fitXY" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/text_welcome"
-        android:layout_marginTop="5dp"
-        android:id="@+id/text_below_welcome_signin"
-        style="@style/second_plan_text"
-        android:text="@string/sign_in_to_continue"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@id/icon_signin"
+            android:layout_marginTop="10dp"
+            android:id="@+id/text_welcome"
+            style="@style/foreground_text"
+            android:text="@string/welcome_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_welcome"
+            android:layout_marginTop="5dp"
+            android:id="@+id/text_below_welcome_signin"
+            style="@style/second_plan_text"
+            android:text="@string/sign_in_to_continue"
+            android:layout_gravity="center"/>
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"

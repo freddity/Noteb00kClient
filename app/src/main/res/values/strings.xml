@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">"The basic application with user accounts "</string>
+    <string name="app_name">"Noteb00k"</string>
     <string name="sign_in">Sign In</string>
     <string name="create_account">Create a new Account</string>
     <string name="sign_up">Sign Up</string>
