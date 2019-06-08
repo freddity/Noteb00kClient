@@ -15,7 +15,7 @@
             android:layout_width="144dp"
             android:layout_height="144dp"
             android:id="@+id/icon_signup"
-            android:background="@drawable/notes"
+            android:background="@drawable/ic_notes"
             android:layout_gravity="center"/>
 
         <TextView

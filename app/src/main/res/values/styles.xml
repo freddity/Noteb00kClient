@@ -34,4 +34,9 @@
         <item name="android:backgroundTint">@color/colorYellow</item>
         <item name="android:textColor">@color/colorYellow</item>
     </style>
+
+    <style name="BottomNavigationTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorYellow</item>
+        <item name="android:textColorSecondary">@color/colorUnselected</item>
+    </style>
 </resources>

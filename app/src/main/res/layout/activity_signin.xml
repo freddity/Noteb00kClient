@@ -16,7 +16,7 @@
             android:layout_height="144dp"
             android:layout_gravity="top"
             android:id="@+id/icon_signin"
-            android:background="@drawable/notes"
+            android:background="@drawable/ic_notes"
             android:scaleType="fitXY" />
 
         <TextView
