@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_constraintHeight_max="130dp"
+    android:background="@drawable/note_background">
+
+    <RelativeLayout
+        android:id="@+id/note_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="5dp"/>
+
+    <RelativeLayout
+        android:id="@+id/note_content"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_below="@+id/note_title"/>
+
+</RelativeLayout>

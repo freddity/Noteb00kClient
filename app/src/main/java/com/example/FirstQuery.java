@@ -2,7 +2,7 @@ package com.example;
 
 import java.io.Serializable;
 
-public enum Query implements Serializable {
+public enum FirstQuery implements Serializable {
 
     SIGN_IN,
     SIGN_UP,

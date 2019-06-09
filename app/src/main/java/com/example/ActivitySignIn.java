@@ -50,7 +50,7 @@ public class ActivitySignIn extends Activity {
                     ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
 
                     ArrayList<Comparable> arrayList = new ArrayList<>();
-                    arrayList.add(0, Query.SIGN_IN);
+                    arrayList.add(0, FirstQuery.SIGN_IN);
                     arrayList.add(1, login);
                     arrayList.add(2, password);
                     out.writeObject(arrayList);

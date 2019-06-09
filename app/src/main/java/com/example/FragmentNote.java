@@ -6,12 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-public class FragmentNotes extends Fragment {
+public class FragmentNote extends Fragment {
 
     private LinearLayout containerForNotes;
 
 
-    public FragmentNotes() {
+
+    public FragmentNote() {
 
     }
 
@@ -20,6 +21,7 @@ public class FragmentNotes extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_notes, container, false);
+
         return view;
     }
 }

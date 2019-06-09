@@ -2,18 +2,26 @@ package com.example;
 
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import static android.view.View.inflate;
+import static java.security.AccessController.getContext;
 
 public class ActivityMain extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
-    final Fragment fragmentNotes = new FragmentNotes();
+    final Fragment fragmentNotes = new FragmentNote();
     final Fragment fragmentSettings = new FragmentSettings();
     final Fragment fragmentTags = new FragmentTags();
     final FragmentManager fm = getSupportFragmentManager();
@@ -55,5 +63,22 @@ public class ActivityMain extends AppCompatActivity implements BottomNavigationV
                 return true;
         }
         return false;
+    }
+
+    public void fabClicked(View view) {
+        LinearLayout linearLayout = findViewById(R.id.notes_container);
+
+        View view2 = getLayoutInflater().inflate(R.layout.note, null);
+        linearLayout.addView(view2);
+
+        RelativeLayout titleRelative = findViewById(R.id.note_title);
+        TextView titleTextView = new TextView(getApplicationContext());
+        titleTextView.setText("Title of your Note");
+        titleRelative.addView(titleTextView);
+
+        RelativeLayout contentRelative = findViewById(R.id.note_content);
+        TextView contentTextView = new TextView(getApplicationContext());
+        contentRelative.addView(contentTextView);
+        contentTextView.setText("Content of your Note");
     }
 }
