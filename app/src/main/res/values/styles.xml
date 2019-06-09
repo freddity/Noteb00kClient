@@ -26,7 +26,7 @@
         <item name="android:windowBackground">@drawable/background_splash</item>
     </style>
 
-    <style name="MyTheme" parent="Theme.AppCompat">
+    <style name="MyTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:colorBackground">@color/colorWhite</item>
     </style>
 
