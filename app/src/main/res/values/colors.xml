@@ -6,4 +6,5 @@
     <color name="colorForeground">#3B4148</color>
     <color name="colorSecondPlan">#929CA0</color>
     <color name="colorUnselected">#AFADAD</color>
+    <color name="colorSeparator">#CECECE</color>
 </resources>

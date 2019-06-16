@@ -8,8 +8,20 @@
     android:clickable="true"
     android:focusable="true"
     android:foreground="?android:attr/selectableItemBackground"
-    app:cardCornerRadius="@dimen/activity_vertical_margin"
-    app:cardElevation="@dimen/activity_vertical_margin">
+    android:layout_margin="10dp"
+    app:cardElevation="0dp">
+
+    <ImageView
+        android:src="@drawable/cardview_backround"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorSeparator"
+        android:layout_marginBottom="5dp"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
