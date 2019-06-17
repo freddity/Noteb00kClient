@@ -28,14 +28,17 @@ public class FragmentNote extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_notes, container, false);
 
-        // Replace 'android.R.id.list' with the 'id' of your RecyclerView
         List<Data> data = fill_with_data();
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
-        LinearLayoutManager mLayoutManager = new LinearLayoutManager(this.getActivity());
-        Log.d("debugMode", "The application stopped after this");
-        recyclerView.setLayoutManager(mLayoutManager);
 
-        Recycler_View_Adapter adapter = new Recycler_View_Adapter(data, getContext());
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(data, getContext());
+        recyclerView.setAdapter(adapter);
+
+        data.add(new Data("TO JAAA", "SIEMA KURKA", R.drawable.ic_launcher));
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        RecyclerViewAdapter adapter2 = new RecyclerViewAdapter(data,getContext());
         recyclerView.setAdapter(adapter);
 
         return view;

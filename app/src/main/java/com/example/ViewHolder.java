@@ -6,14 +6,14 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class View_Holder extends RecyclerView.ViewHolder {
+public class ViewHolder extends RecyclerView.ViewHolder {
 
     CardView cv;
     TextView title;
     TextView description;
     ImageView imageView;
 
-    View_Holder(View itemView) {
+    ViewHolder(View itemView) {
         super(itemView);
         cv = (CardView) itemView.findViewById(R.id.cardView);
         title = (TextView) itemView.findViewById(R.id.title);

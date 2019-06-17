@@ -69,19 +69,6 @@ public class ActivityMain extends AppCompatActivity implements BottomNavigationV
     }
 
     public void fabClicked(View view) {
-        LinearLayout linearLayout = findViewById(R.id.notes_container);
 
-        View view2 = getLayoutInflater().inflate(R.layout.note, null);
-        linearLayout.addView(view2);
-
-        RelativeLayout titleRelative = findViewById(R.id.note_title);
-        TextView titleTextView = new TextView(getApplicationContext());
-        titleTextView.setText("Title of your Note");
-        titleRelative.addView(titleTextView);
-
-        RelativeLayout contentRelative = findViewById(R.id.note_content);
-        TextView contentTextView = new TextView(getApplicationContext());
-        contentRelative.addView(contentTextView);
-        contentTextView.setText("Content of your Note");
     }
 }
