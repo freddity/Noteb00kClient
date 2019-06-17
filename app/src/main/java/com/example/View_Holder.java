@@ -18,6 +18,5 @@ public class View_Holder extends RecyclerView.ViewHolder {
         cv = (CardView) itemView.findViewById(R.id.cardView);
         title = (TextView) itemView.findViewById(R.id.title);
         description = (TextView) itemView.findViewById(R.id.description);
-        imageView = (ImageView) itemView.findViewById(R.id.imageView);
     }
 }

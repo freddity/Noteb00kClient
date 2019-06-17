@@ -3,12 +3,13 @@
         <item name="android:textColor">@color/colorForeground</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
 
     <style name="second_plan_text">
         <item name="android:textColor">@color/colorSecondPlan</item>
         <item name="android:textSize">15sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/roboto_font_family</item>
     </style>
 
     <style name="second_plan__blue_text">
