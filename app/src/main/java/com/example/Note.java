@@ -4,14 +4,16 @@ import java.io.Serializable;
 
 public class Note implements Serializable {
 
-    private String title;
-    private String content;
-    private String tag;
+    String title;
+    String content;
+    String tag;
+    String imagePath;
 
-    public Note(String title, String content, String tag) {
+    public Note(String title, String content, String tag, String imagePath) {
         this.title = title;
         this.content = content;
         this.tag = tag;
+        this.imagePath = imagePath;
     }
 
     public String getTitle() {
@@ -24,5 +26,9 @@ public class Note implements Serializable {
 
     public String getTag() {
         return tag;
+    }
+
+    public String getImagePath() {
+        return imagePath;
     }
 }
