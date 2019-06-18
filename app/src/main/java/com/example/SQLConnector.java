@@ -14,7 +14,7 @@ public class SQLConnector {
 
         private Connection connection;
         private final String url =
-                "jdbc:sqlite:/home/ivan/AndroidStudioProjects/NotesClient/app/src/main/database/database";
+                "jdbc:sqlite:/app/src/main/database/database";
 
         public Connection connect() {
             try {
