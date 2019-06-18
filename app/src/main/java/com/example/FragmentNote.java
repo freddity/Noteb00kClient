@@ -2,11 +2,13 @@ package com.example;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import java.sql.SQLException;
+import java.util.List;
 
 public class FragmentNote extends Fragment {
 
@@ -49,6 +51,24 @@ public class FragmentNote extends Fragment {
             System.out.println("(2) FragmentNote.onCreateView(): SQLException");
             e.printStackTrace();
         }
+
+        return view;
+
+
+        View view = inflater.inflate(R.layout.fragment_notes, container, false);
+
+        List<Data> data = fill_with_data();
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
+
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(data, getContext());
+        recyclerView.setAdapter(adapter);
+
+        data.add(new Data("TO JAAA", "SIEMA KURKA", R.drawable.ic_launcher));
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        RecyclerViewAdapter adapter2 = new RecyclerViewAdapter(data,getContext());
+        recyclerView.setAdapter(adapter);
 
         return view;
     }
