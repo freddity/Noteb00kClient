@@ -13,7 +13,7 @@ public class ActivitySplash extends Activity {
 
         SQLiteDatabase database = openOrCreateDatabase("database",MODE_PRIVATE,null);
         database.execSQL("CREATE TABLE IF NOT EXISTS notes(title TEXT, description TEXT, tag TEXT);");
-
+        new DatabaseVar(database);
 
         Intent intent = new Intent(this, ActivitySignIn.class);
         startActivity(intent);

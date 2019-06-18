@@ -24,20 +24,27 @@ public class FragmentNote extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.recyclerview);
 
         try {
-            RecyclerViewAdapter adapter = new RecyclerViewAdapter(sqlConnector.getAllNotes(), getContext());
-            recyclerView.setAdapter(adapter);
+            sqlConnector.addNote(
+                    "Batman vs Superman",
+                    "Following the destruction of Metropolis, Batman embarks on a personal vendetta against Superman ",
+                    "films"
+            );
         } catch (SQLException e) {
             System.out.println("(1) FragmentNote.onCreateView(): SQLException");
             e.printStackTrace();
         }
 
         try {
-            sqlConnector.addNote(
-                    "Batman vs Superman",
-                    "Following the destruction of Metropolis, Batman embarks on a personal vendetta against Superman ",
-                    "films",
-                    ""
-            );
+            RecyclerViewAdapter adapter = new RecyclerViewAdapter(sqlConnector.getAllNotes(), getContext());
+            recyclerView.setAdapter(adapter);
+        } catch (SQLException e) {
+            System.out.println("(2) FragmentNote.onCreateView(): SQLException");
+            e.printStackTrace();
+        }
+
+        try {
+            Note x = (Note) sqlConnector.getAllNotes().get(0);
+            System.out.println("ELOOO" + x.title);
         } catch (SQLException e) {
             System.out.println("(2) FragmentNote.onCreateView(): SQLException");
             e.printStackTrace();

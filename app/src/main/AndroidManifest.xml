@@ -14,6 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/MyTheme"
         tools:ignore="GoogleAppIndexingWarning">
+
         <activity
             android:name=".ActivityMain"
             android:label="@string/title_activity_main"/>

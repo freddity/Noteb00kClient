@@ -33,7 +33,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
         //Use the provided View Holder on the onCreateViewHolder method to populate the current row on the RecyclerView
         holder.title.setText(list.get(position).title);
-        holder.description.setText(list.get(position).content);
+        holder.description.setText(list.get(position).description);
 
         //animate(holder);
 
