@@ -5,15 +5,13 @@ import java.io.Serializable;
 public class Note implements Serializable {
 
     String title;
-    String content;
+    String description;
     String tag;
-    String imagePath;
 
-    public Note(String title, String content, String tag) {
+    public Note(String title, String description, String tag) {
         this.title = title;
-        this.content = content;
+        this.description = description;
         this.tag = tag;
-        this.imagePath = imagePath;
     }
 
     public String getTitle() {
@@ -21,7 +19,7 @@ public class Note implements Serializable {
     }
 
     public String getContent() {
-        return content;
+        return description;
     }
 
     public String getTag() {
