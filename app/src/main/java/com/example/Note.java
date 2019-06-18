@@ -9,7 +9,7 @@ public class Note implements Serializable {
     String tag;
     String imagePath;
 
-    public Note(String title, String content, String tag, String imagePath) {
+    public Note(String title, String content, String tag) {
         this.title = title;
         this.content = content;
         this.tag = tag;
@@ -26,9 +26,5 @@ public class Note implements Serializable {
 
     public String getTag() {
         return tag;
-    }
-
-    public String getImagePath() {
-        return imagePath;
     }
 }
