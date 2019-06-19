@@ -59,14 +59,21 @@ public class FragmentNote extends Fragment {
         List<Note> data = fill_with_data();
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(data, getContext());
-        recyclerView.setAdapter(adapter);
+            /*RecyclerViewAdapter adapter = new RecyclerViewAdapter(data, getContext());
+            recyclerView.setAdapter(adapter);*/
 
         data.add(new Note("TO JAAA", "SIEMA KURKA", "film"));
 
+
+
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        RecyclerViewAdapter adapter2 = new RecyclerViewAdapter(data,getContext());
+        RecyclerViewAdapter adapter2 = null;
+        try {
+            adapter2 = new RecyclerViewAdapter(sqlConnector.addNote("x", "X", "X"), getContext());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         recyclerView.setAdapter(adapter2);
 
         return view;
