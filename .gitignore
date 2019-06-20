@@ -16,3 +16,4 @@ app/proguards-rules.pro
 app/src/androidTest/
 app/src/test/
 NotesClient.iml
+*.properties
