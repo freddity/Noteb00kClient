@@ -1,39 +1,32 @@
 package com.example;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static android.view.View.inflate;
-import static java.security.AccessController.getContext;
 
 public class ActivityMain extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
-    final Fragment fragmentNotes = new FragmentNote();
-    final Fragment fragmentSettings = new FragmentSettings();
-    final Fragment fragmentTags = new FragmentTags();
-    final FragmentManager fm = getSupportFragmentManager();
+    private Fragment fragmentNotes;
+    private Fragment fragmentSettings;
+    private Fragment fragmentTags;
+    private FragmentManager fm = getSupportFragmentManager();
     private Fragment active = fragmentNotes;
+    private SQLiteDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        fragmentNotes = new FragmentNote();
+        fragmentSettings = new FragmentTags();
+        fragmentTags = new FragmentTags();
 
         fm.beginTransaction().add(R.id.main_container, fragmentSettings).hide(fragmentSettings).commit();
         fm.beginTransaction().add(R.id.main_container, fragmentTags).hide(fragmentTags).commit();

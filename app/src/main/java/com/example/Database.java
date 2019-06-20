@@ -2,11 +2,11 @@ package com.example;
 
 import android.database.sqlite.SQLiteDatabase;
 
-public class DatabaseVar {
+public class Database {
 
     private static SQLiteDatabase database;
 
-    public DatabaseVar(SQLiteDatabase database) {
+    public Database(SQLiteDatabase database) {
         this.database = database;
     }
 

@@ -2,6 +2,7 @@ package com.example;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -59,7 +60,6 @@ public class ActivitySignIn extends Activity {
 
                     if (error == Error.DONE) {
                         Intent intent = new Intent(ActivitySignIn.this, ActivityMain.class);
-                        //intent.putExtra();
                         startActivity(intent);
                         finish();
                     } else if (error == Error.ACCOUNT_DOES_NOT_EXIST) {

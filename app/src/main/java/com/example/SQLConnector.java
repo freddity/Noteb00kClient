@@ -1,32 +1,50 @@
 package com.example;
 
-import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
-
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class SQLConnector {
 
     private Object dbPen = new Object();
+    private SQLiteDatabase database;
+
+    public SQLConnector() {
+        database = Database.getDatabase();
+    }
 
     public ArrayList getAllNotes() throws SQLException {
         Log.d("Stack", "SQLConnector.getAllNotes()");
 
+        Cursor cursor = database.rawQuery("SELECT * FROM notes", null);
+
+        cursor.moveToFirst();
+
         ArrayList<Note> notes = new ArrayList<>();
 
-        Cursor rs = DatabaseVar.getDatabase().rawQuery("SELECT * FROM notes", null);
+        /*while (cursor.moveToLast()) {
 
-        rs.moveToFirst();
+            System.out.println("4444 " + notes.add(new Note(
+                    cursor.getString(0),
+                    cursor.getString(1),
+                    cursor.getString(2)
+            )));
+        }*/
 
-        notes.add(new Note(
-                rs.getString(0),
-                rs.getString(1),
-                rs.getString(2)
-        ));
+        if (cursor.moveToFirst())
+        {
+            do
+            {
+                System.out.println("4444 " + notes.add(new Note(
+                        cursor.getString(0),
+                        cursor.getString(1),
+                        cursor.getString(2)
+                )));
+
+            } while (cursor.moveToNext());
+        }
 
         return notes;
     }
@@ -34,17 +52,10 @@ public class SQLConnector {
     public ArrayList addNote(String title, String description, String tag) throws SQLException {
         Log.d("Stack", "SQLConnector.addNote()");
 
-        DatabaseVar.getDatabase().execSQL("INSERT INTO notes VALUES('x','x','x');");
+        synchronized (dbPen) {
+            database.execSQL("INSERT INTO notes VALUES('" + title + "','" + description + "','" + tag + "');");
+        }
 
-        /*long result = database.insert("notes", null, contentValues);
-        if (result == -1) {
-            return false;
-        } else {
-            return true;
-        }*/
-
-        ArrayList arrayList = getAllNotes();
-        System.out.println("PIPI " + arrayList.size());
         return getAllNotes();
     }
 }

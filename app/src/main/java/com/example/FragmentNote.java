@@ -15,13 +15,12 @@ public class FragmentNote extends Fragment {
 
     private SQLConnector sqlConnector;
 
-    public FragmentNote() {
-        sqlConnector = new SQLConnector();
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        sqlConnector = new SQLConnector();
+
         View view = inflater.inflate(R.layout.fragment_notes, container, false);
 
         /*RecyclerView recyclerView = view.findViewById(R.id.recyclerview);
@@ -70,7 +69,7 @@ public class FragmentNote extends Fragment {
 
         RecyclerViewAdapter adapter2 = null;
         try {
-            adapter2 = new RecyclerViewAdapter(sqlConnector.addNote("x", "X", "X"), getContext());
+            adapter2 = new RecyclerViewAdapter(sqlConnector.addNote("adapter", "adapter", "X"), getContext());
         } catch (SQLException e) {
             e.printStackTrace();
         }
