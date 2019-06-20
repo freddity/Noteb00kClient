@@ -15,7 +15,7 @@ import java.sql.SQLException;
 public class ActivityMain extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     private FragmentNote fragmentNotes = new FragmentNote();
-    private FragmentTags fragmentSettings = new FragmentTags();
+    private FragmentSettings fragmentSettings = new FragmentSettings();
     private FragmentTags fragmentTags = new FragmentTags();
     private FragmentManager fm = getSupportFragmentManager();
     private Fragment active = fragmentNotes;
