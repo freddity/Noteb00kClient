@@ -19,20 +19,9 @@ public class SQLConnector {
         Log.d("Stack", "SQLConnector.getAllNotes()");
 
         Cursor cursor = database.rawQuery("SELECT * FROM notes", null);
-
         cursor.moveToFirst();
 
         ArrayList<Note> notes = new ArrayList<>();
-
-        /*while (cursor.moveToLast()) {
-
-            System.out.println("4444 " + notes.add(new Note(
-                    cursor.getString(0),
-                    cursor.getString(1),
-                    cursor.getString(2)
-            )));
-        }*/
-
         if (cursor.moveToFirst())
         {
             do

@@ -14,68 +14,40 @@ import java.util.List;
 public class FragmentNote extends Fragment {
 
     private SQLConnector sqlConnector;
+    private View context;
+    private RecyclerView recyclerView;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle bundle) {
+
+        View view = inflater.inflate(R.layout.fragment_notes, container, false);
+        this.context = view;
 
         sqlConnector = new SQLConnector();
 
-        View view = inflater.inflate(R.layout.fragment_notes, container, false);
-
-        /*RecyclerView recyclerView = view.findViewById(R.id.recyclerview);
-
-        try {
-            sqlConnector.addNote(
-                    "Batman vs Superman",
-                    "Following the destruction of Metropolis, Batman embarks on a personal vendetta against Superman ",
-                    "films"
-            );
-        } catch (SQLException e) {
-            System.out.println("(1) FragmentNote.onCreateView(): SQLException");
-            e.printStackTrace();
-        }
-
-        try {
-            RecyclerViewAdapter adapter = new RecyclerViewAdapter(sqlConnector.getAllNotes(), getContext());
-            recyclerView.setAdapter(adapter);
-        } catch (SQLException e) {
-            System.out.println("(2) FragmentNote.onCreateView(): SQLException");
-            e.printStackTrace();
-        }
-
-        try {
-            Note x = (Note) sqlConnector.getAllNotes().get(0);
-            System.out.println("ELOOO" + x.title);
-        } catch (SQLException e) {
-            System.out.println("(2) FragmentNote.onCreateView(): SQLException");
-            e.printStackTrace();
-        }
-
-        return view;*/
-
-
-        List<Note> data = fill_with_data();
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview);
-
-            /*RecyclerViewAdapter adapter = new RecyclerViewAdapter(data, getContext());
-            recyclerView.setAdapter(adapter);*/
-
-        data.add(new Note("TO JAAA", "SIEMA KURKA", "film"));
-
-
-
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerview);
+        this.recyclerView = recyclerView;
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        RecyclerViewAdapter adapter2 = null;
+        RecyclerViewAdapter adapter = null;
         try {
-            adapter2 = new RecyclerViewAdapter(sqlConnector.addNote("adapter", "adapter", "X"), getContext());
+            adapter = new RecyclerViewAdapter(sqlConnector.addNote("adapter", "adapter", "X"), getContext());
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        recyclerView.setAdapter(adapter2);
+        recyclerView.setAdapter(adapter);
 
         return view;
+    }
+
+    public void addNote(String title, String description, String tag) {
+        RecyclerViewAdapter adapter = null;
+        try {
+            adapter = new RecyclerViewAdapter(sqlConnector.addNote(title, description, tag), getContext());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        recyclerView.setAdapter(adapter);
     }
 
     public List<Note> fill_with_data() {

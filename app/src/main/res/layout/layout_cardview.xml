@@ -8,8 +8,8 @@
     android:focusable="true"
     android:foreground="?android:attr/selectableItemBackground"
     app:cardElevation="0dp"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
+    android:layout_marginLeft="7dp"
+    android:layout_marginRight="7dp"
     android:layout_marginBottom="10dp"
     android:layout_marginTop="-1dp">
 

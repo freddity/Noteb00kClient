@@ -10,14 +10,15 @@ import android.support.annotation.NonNull;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.sql.SQLException;
+
 public class ActivityMain extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
-    private Fragment fragmentNotes = new FragmentNote();
-    private Fragment fragmentSettings = new FragmentTags();
-    private Fragment fragmentTags = new FragmentTags();
+    private FragmentNote fragmentNotes = new FragmentNote();
+    private FragmentTags fragmentSettings = new FragmentTags();
+    private FragmentTags fragmentTags = new FragmentTags();
     private FragmentManager fm = getSupportFragmentManager();
     private Fragment active = fragmentNotes;
-    private SQLiteDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,6 @@ public class ActivityMain extends AppCompatActivity implements BottomNavigationV
     }
 
     public void fabClicked(View view) {
-
+        fragmentNotes.addNote("title-Main", "description-main", "tag-main");
     }
 }
