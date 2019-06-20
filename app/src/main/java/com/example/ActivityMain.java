@@ -12,9 +12,9 @@ import android.view.View;
 
 public class ActivityMain extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
-    private Fragment fragmentNotes;
-    private Fragment fragmentSettings;
-    private Fragment fragmentTags;
+    private Fragment fragmentNotes = new FragmentNote();
+    private Fragment fragmentSettings = new FragmentTags();
+    private Fragment fragmentTags = new FragmentTags();
     private FragmentManager fm = getSupportFragmentManager();
     private Fragment active = fragmentNotes;
     private SQLiteDatabase database;
@@ -23,10 +23,6 @@ public class ActivityMain extends AppCompatActivity implements BottomNavigationV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        fragmentNotes = new FragmentNote();
-        fragmentSettings = new FragmentTags();
-        fragmentTags = new FragmentTags();
 
         fm.beginTransaction().add(R.id.main_container, fragmentSettings).hide(fragmentSettings).commit();
         fm.beginTransaction().add(R.id.main_container, fragmentTags).hide(fragmentTags).commit();
