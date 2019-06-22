@@ -29,14 +29,6 @@ public class FragmentNote extends Fragment {
         this.recyclerView = recyclerView;
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        RecyclerViewAdapter adapter = null;
-        try {
-            adapter = new RecyclerViewAdapter(sqlConnector.addNote("adapter", "adapter", "X"), getContext());
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        recyclerView.setAdapter(adapter);
-
         return view;
     }
 

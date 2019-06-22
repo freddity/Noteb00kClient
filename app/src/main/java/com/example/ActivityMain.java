@@ -1,6 +1,6 @@
 package com.example;
 
-import android.database.sqlite.SQLiteDatabase;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -9,8 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.annotation.NonNull;
 import android.view.MenuItem;
 import android.view.View;
-
-import java.sql.SQLException;
 
 public class ActivityMain extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -59,6 +57,6 @@ public class ActivityMain extends AppCompatActivity implements BottomNavigationV
     }
 
     public void fabClicked(View view) {
-        fragmentNotes.addNote("title-Main", "description-main", "tag-main");
+        new DialogNoteCreator(fragmentNotes).show(getSupportFragmentManager(), "note creator dialog");
     }
 }

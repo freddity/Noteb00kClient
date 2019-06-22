@@ -40,4 +40,10 @@
         <item name="colorPrimary">@color/colorYellow</item>
         <item name="android:textColorSecondary">@color/colorUnselected</item>
     </style>
+
+    <style name="white_text">
+        <item name="android:color">@color/colorWhite</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

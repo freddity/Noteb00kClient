@@ -21,4 +21,8 @@
     <string name="title_notes">Notes</string>
     <string name="title_settings">Settings</string>
     <string name="title_tags">Tags</string>
+    <string name="title">title</string>
+    <string name="description">description</string>
+    <string name="create_note">Create Note</string>
+    <string name="create">Create</string>
 </resources>

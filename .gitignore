@@ -6,6 +6,7 @@ FirstAndroidAppClient2.iml
 *.properties
 gradlew.bat
 gradlew
+build.gradle
 
 app/app.iml
 app/build/
